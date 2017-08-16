@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.cordova.jsontest"
+    version="1.0.0">
+    <name>Cordova Plugin JSON Test</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <!-- <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
+    <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue> -->
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="jsontest" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="JsonTest">
+          <param name="android-package" value="com.cordova.jsontest.JsonTest" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/jsontest/JsonTest.java" target-dir="src/com/cordova/jsontest/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="jsontest" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="JsonTest">
+                <param name="ios-package" value="JsonTest" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/JsonTest.h" />
+        <source-file src="src/ios/JsonTest.m" />
+    </platform>
+</plugin>
