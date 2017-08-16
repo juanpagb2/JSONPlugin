@@ -20,7 +20,7 @@
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="pluginjson">
-          <param name="android-package" value="com.mobtion.pluginjson.PluginJson" />
+          <param name="android-package" value="com.mobtion.pluginjson.PluginJSON" />
           <param name="onload" value="true" />
         </feature>
       </config-file>
