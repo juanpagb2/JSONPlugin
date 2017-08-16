@@ -48,7 +48,7 @@ public class PluginJSON extends CordovaPlugin {
             public void run() {
                 try {
                     String jsonResult = "";
-                    data = URLEncoder.encode(data);
+                    String encodedata = URLEncoder.encode(data, "UTF-8");
 
                     // Defined URL  where to send data
                     URL url = new URL(serviceUrl);
@@ -57,7 +57,7 @@ public class PluginJSON extends CordovaPlugin {
                     URLConnection conn = url.openConnection();
                     conn.setDoOutput(true);
                     OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-                    wr.write( data );
+                    wr.write(encodedata);
                     wr.flush();
 
                     // Get the server response
