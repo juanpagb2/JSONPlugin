@@ -1,12 +1,12 @@
 {
-  "name": "com.cordova.jsontest",
+  "name": "com.mobtion.pluginjson",
   "version": "1.0.0",
   "cordova": {
-    "id": "com.cordova.jsontest",
+    "id": "com.mobtion.pluginjson",
     "platforms": [
       "android",
       "ios"
     ]
   },
-  "description": "A starting point for a Cordova Plugin Test"
+  "description": "This plugin has the capability to consume JSON "
 }

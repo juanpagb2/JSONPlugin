@@ -1,28 +1,10 @@
-#import "JsonTest.h"
+#import "pluginjson.h"
 
 #import <Cordova/CDVAvailability.h>
 
-@implementation JsonTest
+@implementation pluginjson
 
 - (void)pluginInitialize {
-}
-
-- (void)echo:(CDVInvokedUrlCommand *)command {
-  NSString* phrase = [command.arguments objectAtIndex:0];
-  NSLog(@"%@", phrase);
-}
-
-- (void)getDate:(CDVInvokedUrlCommand *)command {
-  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-  NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
-  [dateFormatter setLocale:enUSPOSIXLocale];
-  [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
-
-  NSDate *now = [NSDate date];
-  NSString *iso8601String = [[dateFormatter stringFromDate:now] stringByAppendingString: @" PluginTest"];
-
-  CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:iso8601String];
-  [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
 -(void)getJSONData:(CDVInvokedUrlCommand *)command{
@@ -46,7 +28,7 @@
         //Creates the request
         NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
         //We save the parameters for the service in the variable
-        NSString * params =@"alias_id=502520329";
+        NSString * params =  [command.arguments objectAtIndex:1];
         //Specifies that is a POST action
         [urlRequest setHTTPMethod:@"POST"];
         //Adds the parameters to the request

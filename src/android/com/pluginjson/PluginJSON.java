@@ -1,6 +1,6 @@
 /**
  */
-package com.cordova.jsontest;
+package com.mobtion.pluginjson;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -28,34 +28,27 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.Date;
 
-public class JsonTest extends CordovaPlugin {
-  private static final String TAG = "JsonTest";
+public class PluginJSON extends CordovaPlugin {
+  private static final String TAG = "PluginJSON";
 
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     super.initialize(cordova, webView);
 
-    Log.d(TAG, "Initializing JsonTest");
+    Log.d(TAG, "Initializing PluginJSON");
   }
 
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext)throws JSONException {
-    if(action.equals("echo")) {
-      String phrase = args.getString(0);
-      // Echo back the first argument
-      Log.d(TAG, phrase);
-    } else if(action.equals("getDate")) {
-      // An example of returning data back to the web layer
-      final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
-      callbackContext.sendPluginResult(result);
-    } else if(action.equals("getJSONData")){
+    if(action.equals("getJSONData")){
 
         final String serviceUrl = args.getString(0);
+        final String data = args.getString(1);
 
         this.cordova.getThreadPool().execute(new Runnable() {
             @Override
             public void run() {
                 try {
                     String jsonResult = "";
-                    String data = URLEncoder.encode("alias_id", "UTF-8") + "=" + URLEncoder.encode("502520329", "UTF-8");
+                    data = URLEncoder.encode(data);
 
                     // Defined URL  where to send data
                     URL url = new URL(serviceUrl);
