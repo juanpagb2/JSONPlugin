@@ -5,8 +5,8 @@
     version="1.0.0">
     <name>Cordova Plugin JSON</name>
     <description></description>
-    <license>MIT</license>
-    <keywords></keywords>
+    <license>UNLICENSED</license>
+    <keywords>cordova,json</keywords>
     <repo>https://github.com/juanpagb2/JSONPlugin.git</repo>
     <!-- <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue> --> -->
 

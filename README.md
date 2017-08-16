@@ -1,4 +1,4 @@
-Cordova Plugin Template
+Cordova Plugin 
 ======
 
-This is a simple starting point for building a Cordova plugin on iOS and Android.
+This plugin has the capability to consume JSON Services

@@ -1,6 +1,6 @@
 {
   "name": "com.mobtion.pluginjson",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "cordova": {
     "id": "com.mobtion.pluginjson",
     "platforms": [
