@@ -16,7 +16,7 @@
         <runs/>
 
         <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-        <clobbers target="pluginjson" />
+        <clobbers target="PluginJSON" />
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="PluginJSON">
@@ -32,7 +32,7 @@
     <platform name="ios">
         <js-module src="www/plugin.js" name="plugin">
             <runs/>
-            <clobbers target="pluginjson" />
+            <clobbers target="PluginJSON" />
         </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="PluginJSON">
