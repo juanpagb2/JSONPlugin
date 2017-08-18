@@ -36,7 +36,7 @@
         </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="PluginJSON">
-                <param name="ios-package" value="pluginjson" onload="true" />
+                <param name="ios-package" value="PluginJSON" onload="true" />
             </feature>
         </config-file>
 
