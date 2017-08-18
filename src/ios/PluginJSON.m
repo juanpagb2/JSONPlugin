@@ -1,4 +1,4 @@
-#import "pluginjson.h"
+#import "PluginJSON.h"
 
 #import <Cordova/CDVAvailability.h>
 
