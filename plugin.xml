@@ -19,7 +19,7 @@
         <clobbers target="pluginjson" />
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="pluginjson">
+        <feature name="PluginJSON">
           <param name="android-package" value="com.mobtion.pluginjson.PluginJSON" />
           <param name="onload" value="true" />
         </feature>
@@ -35,7 +35,7 @@
             <clobbers target="pluginjson" />
         </js-module>
         <config-file target="config.xml" parent="/*">
-            <feature name="pluginjson">
+            <feature name="PluginJSON">
                 <param name="ios-package" value="pluginjson" onload="true" />
             </feature>
         </config-file>

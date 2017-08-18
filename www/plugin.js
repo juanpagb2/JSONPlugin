@@ -1,12 +1,12 @@
 
 var exec = require('cordova/exec');
 
-var PLUGIN_NAME = 'pluginjson';
+var PLUGIN_NAME = 'PluginJSON';
 
-var pluginjson = {
+var PluginJSON = {
   getJSONData: function(url, headers,cb, cberror){
     exec(cb, cberror, PLUGIN_NAME, 'getJSONData', [url, headers]);
   }
 };
 
-module.exports = pluginjson;
+module.exports = PluginJSON;

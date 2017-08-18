@@ -2,7 +2,7 @@
 
 #import <Cordova/CDVAvailability.h>
 
-@implementation pluginjson
+@implementation PluginJSON
 
 - (void)pluginInitialize {
 }

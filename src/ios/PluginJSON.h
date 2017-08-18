@@ -1,6 +1,6 @@
 #import <Cordova/CDVPlugin.h>
 
-@interface pluginjson : CDVPlugin {
+@interface PluginJSON : CDVPlugin {
 }
 // The hooks for our plugin commands
 - (void)getJSONData:(CDVInvokedUrlCommand *)command;
